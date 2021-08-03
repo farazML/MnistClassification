@@ -21,9 +21,9 @@ model.fit(x_train, y_train, epochs=1)
 plt.imshow(x_test[0], cmap=plt.cm.binary)  # optional binary
 plt.show()
 
-model.save('epic_num_reader.model')
+model.save('Mnist_Classifier.model')
 
-new_model = tf.keras.models.load_model('epic_num_reader.model')
+new_model = tf.keras.models.load_model('Mnist_Classifier.model')
 predictions = new_model.predict(x_test)
 
 print(np.argmax(predictions[0]))
